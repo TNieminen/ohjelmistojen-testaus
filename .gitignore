@@ -134,6 +134,8 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+## ignore sub node_modules
+**/**/node_modules/
 
 # TypeScript v1 declaration files
 typings/
