@@ -11,7 +11,7 @@ const noInternalModules = chunk.modules.filter(mod => !mod.id.match(/internal/i)
 // })
 const noInternalAsSource = noInternalModules.filter(mod => !mod.source.match(/internal/i))
 const noInternalAsIssuer = noInternalAsSource.filter(mod => mod.issuer === null || !mod.issuer.match(/internal/i))
-// remove internal reasons 
+// TODO remove internal reasons 
 
 // noInternalAsSource.forEach((mod)=>{
 //   console.log(mod.source.match(/internal/i))
