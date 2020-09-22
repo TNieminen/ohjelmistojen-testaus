@@ -1,4 +1,4 @@
-import recursive from 'recursive-readdir'
+const recursive = require('recursive-readdir')
 // import works because we define a module env in package.json
 
 const readDirPromise = path => new Promise((resolve,reject) => {

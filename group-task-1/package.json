@@ -6,7 +6,6 @@
   "engines": {
     "node": "^12"
   },
-  "type": "module",
   "scripts": {
     "test": "echo \"Error: no tests are implemented yet \" && exit 1"
   },
@@ -14,6 +13,7 @@
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {
+    "fs-extra": "^9.0.1",
     "recursive-readdir": "^2.2.2",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12"

@@ -1,3 +1,5 @@
+// this was created manually using the output of getFiles.js
+
 export * from './assignment/src/add.js'
 export * from './assignment/src/at.js'
 export * from './assignment/src/camelCase.js'
