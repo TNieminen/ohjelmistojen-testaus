@@ -1,7 +1,9 @@
-import baseDifference from './.internal/baseDifference.js'
-import baseFlatten from './.internal/baseFlatten.js'
+// import baseDifference from './.internal/baseDifference.js'
+// import baseFlatten from './.internal/baseFlatten.js'
 import isArrayLikeObject from './isArrayLikeObject.js'
 
+const baseDifference = () => {}
+const baseFlatten = () => {}
 /**
  * Creates an array of `array` values not included in the other given arrays
  * using [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)

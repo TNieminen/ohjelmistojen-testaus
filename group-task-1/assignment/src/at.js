@@ -1,6 +1,7 @@
-import baseAt from './.internal/baseAt.js'
-import baseFlatten from './.internal/baseFlatten.js'
-
+//  import baseAt from './.internal/baseAt.js'
+//  import baseFlatten from './.internal/baseFlatten.js'
+const baseAt = () => {}
+const baseFlatten = () => {}
 /**
  * Creates an array of values corresponding to `paths` of `object`.
  *

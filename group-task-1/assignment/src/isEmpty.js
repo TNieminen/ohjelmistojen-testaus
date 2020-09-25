@@ -1,12 +1,15 @@
-import getTag from './.internal/getTag.js'
+// import getTag from './.internal/getTag.js'
 import isArguments from './isArguments.js'
 import isArrayLike from './isArrayLike.js'
 import isBuffer from './isBuffer.js'
-import isPrototype from './.internal/isPrototype.js'
+// import isPrototype from './.internal/isPrototype.js'
 import isTypedArray from './isTypedArray.js'
 
+const getTag = () => {}
+const isPrototype = () => {}
+
 /** Used to check objects for own properties. */
-const hasOwnProperty = Object.prototype.hasOwnProperty
+const {hasOwnProperty} = Object.prototype
 
 /**
  * Checks if `value` is an empty object, collection, map, or set.

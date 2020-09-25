@@ -1,8 +1,9 @@
-import baseAssignValue from './.internal/baseAssignValue.js'
+// import baseAssignValue from './.internal/baseAssignValue.js'
 import reduce from './reduce.js'
+const baseAssignValue = () => {}
 
 /** Used to check objects for own properties. */
-const hasOwnProperty = Object.prototype.hasOwnProperty
+const {hasOwnProperty} = Object.prototype
 
 /**
  * Creates an object composed of keys generated from the results of running

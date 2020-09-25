@@ -1,4 +1,6 @@
-import createMathOperation from './.internal/createMathOperation.js'
+// import createMathOperation from './.internal/createMathOperation.js'
+
+const createMathOperation = () => {}
 
 /**
  * Divide two numbers.

@@ -11,11 +11,11 @@ const readDirPromise = path => new Promise((resolve,reject) => {
       .filter(file => !file.match(/\.internal/i))
       .filter(file => file.match(/src/i))
       .filter(file => file.match(/.js/i))      
-    resolve(filteredFiles.map(file=>file.split('src/')[1]))
+    resolve(filteredFiles.map(file => file.split('src/')[1]))
   })  
 })
-readDirPromise('./assignment').then((files)=>{
-  files.forEach(file => {
+readDirPromise('./assignment').then((files) => {
+  files.forEach((file) => {
     console.log(`'${file}'`)
-  });
+  })
 })

@@ -1,4 +1,6 @@
-import root from './.internal/root.js'
+// import root from './.internal/root.js'
+
+const root = () => {}
 
 /** Detect free variable `exports`. */
 const freeExports = typeof exports === 'object' && exports !== null && !exports.nodeType && exports

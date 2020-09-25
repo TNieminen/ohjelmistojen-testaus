@@ -1,5 +1,7 @@
-import arrayReduce from './.internal/arrayReduce.js'
+// import arrayReduce from './.internal/arrayReduce.js'
 import defaultTo from './defaultTo.js'
+
+const arrayReduce = () => {}
 
 /**
  * This method is like `defaultTo` except that it accepts multiple default values and returns the first one that is not

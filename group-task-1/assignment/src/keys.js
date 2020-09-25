@@ -1,5 +1,7 @@
-import arrayLikeKeys from './.internal/arrayLikeKeys.js'
+// import arrayLikeKeys from './.internal/arrayLikeKeys.js'
 import isArrayLike from './isArrayLike.js'
+
+const arrayLikeKeys = () => {}
 
 /**
  * Creates an array of the own enumerable property names of `object`.
