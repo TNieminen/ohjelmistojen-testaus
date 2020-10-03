@@ -33,3 +33,8 @@ npx webpack --entry ./src/utils/bundle-assignment.js --mode development --profil
 ```
 
 you can analyze this json file [here](http://webpack.github.io/analyse/#modules)
+
+
+# Resources
+
+https://www.youtube.com/watch?v=Af4M8GMoxi4
