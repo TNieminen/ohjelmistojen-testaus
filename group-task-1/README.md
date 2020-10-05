@@ -50,3 +50,6 @@ I've set up an interesting setup to test `isBoolean.js` at `isBoolean.test.js`.
 I'm using an env variable and the file `testController.js` to define whether
 or not to mock the imported modules. This way we can either run the same tests
 in totally insulated unit environment or in an integration environment. Whaddayathink?
+
+You can try running this by doing:
+`yarn unit test` and `yarn integration-test`
