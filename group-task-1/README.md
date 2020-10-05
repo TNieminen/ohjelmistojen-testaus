@@ -38,3 +38,15 @@ you can analyze this json file [here](http://webpack.github.io/analyse/#modules)
 # Resources
 
 https://www.youtube.com/watch?v=Af4M8GMoxi4
+
+### pairwise testing
+
+https://www.softwaretestinghelp.com/what-is-pairwise-testing/
+
+
+# Testing strategy proposal
+
+I've set up an interesting setup to test `isBoolean.js` at `isBoolean.test.js`.
+I'm using an env variable and the file `testController.js` to define whether
+or not to mock the imported modules. This way we can either run the same tests
+in totally insulated unit environment or in an integration environment. Whaddayathink?

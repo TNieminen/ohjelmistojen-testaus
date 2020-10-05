@@ -1,7 +1,5 @@
-// import getTag from './.internal/getTag.js'
+import getTag from './.internal/getTag.js'
 import isObjectLike from './isObjectLike.js'
-
-const getTag = () => {}
 
 /**
  * Checks if `value` is classified as a boolean primitive or object.

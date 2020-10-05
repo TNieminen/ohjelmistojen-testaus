@@ -1,6 +1,4 @@
-// import getTag from './.internal/getTag.js'
-
-const getTag = () => {}
+import getTag from './.internal/getTag.js'
 
 /**
  * Checks if `value` is classified as a `Symbol` primitive or object.

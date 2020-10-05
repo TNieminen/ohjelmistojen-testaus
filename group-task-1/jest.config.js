@@ -7,7 +7,7 @@ module.exports = {
     // here you can map module imports
     // for instance if you don't want to do ./internal/some-module.js
     // you could just map that to @/some-module.js
-    // '^@/(.*)$': '<rootDir>/$1',
+    '^@/(.*)$': '<rootDir>/assignment/src/$1',
   },
   // list of extensions the modules use
   moduleFileExtensions: ['js','json'],

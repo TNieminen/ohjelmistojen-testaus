@@ -1,6 +1,4 @@
-// import baseGet from './.internal/baseGet.js'
-
-const baseGet = () => {}
+import baseGet from './.internal/baseGet.js'
 
 /**
  * Gets the value at `path` of `object`. If the resolved value is

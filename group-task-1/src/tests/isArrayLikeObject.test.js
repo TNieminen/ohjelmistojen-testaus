@@ -1,4 +1,4 @@
-import isArrayLikeObject from '../../assignment/src/isArrayLikeObject'
+import isArrayLikeObject from '@/isArrayLikeObject'
 
 let mockArrayLikeReturn = false
 let mockObjectLikeReturn = false
@@ -8,9 +8,9 @@ let mockObjectLikeReturn = false
  * @see https://remarkablemark.org/blog/2018/06/28/jest-mock-default-named-export/
  * @see https://medium.com/trabe/mocking-different-values-for-the-same-module-using-jest-a7b8d358d78b
  */
-jest.mock('../../assignment/src/isArrayLike.js',() =>  ({__esModule:true,
+jest.mock('@/isArrayLike.js',() =>  ({__esModule:true,
   default:() => mockArrayLikeReturn}))
-jest.mock('../../assignment/src/isObjectLike.js',() =>  ({__esModule:true,
+jest.mock('@/isObjectLike.js',() =>  ({__esModule:true,
   default:() => mockObjectLikeReturn}))
 
 

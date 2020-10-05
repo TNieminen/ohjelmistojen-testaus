@@ -1,6 +1,5 @@
-// import createCaseFirst from './.internal/createCaseFirst.js'
+import createCaseFirst from './.internal/createCaseFirst.js'
 
-const  createCaseFirst = () => {}
 
 /**
  * Converts the first character of `string` to upper case.

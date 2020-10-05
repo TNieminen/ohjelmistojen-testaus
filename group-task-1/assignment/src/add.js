@@ -1,5 +1,5 @@
-// import createMathOperation from './.internal/createMathOperation.js'
-const createMathOperation = () => {}
+import createMathOperation from './.internal/createMathOperation.js'
+
 /**
  * Adds two numbers.
  *
