@@ -24,7 +24,7 @@ module.exports = {
   
   // decide where to collect coverage from
   collectCoverageFrom: [
-    '<rootDir>/assignment/src/*.js'
+    '<rootDir>/src/assignment/src/*.js'
   ],
 
   // you might need to run separate setup scripts for the env to work
