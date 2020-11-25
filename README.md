@@ -53,3 +53,8 @@ in totally insulated unit environment or in an integration environment. Whaddaya
 
 You can try running this by doing:
 `yarn unit test` and `yarn integration-test`
+
+# Coveralls
+
+https://github.com/nickmerwin/node-coveralls
+https://github.com/Ethan-Arrowood/harperdb-connect/blob/master/.travis.yml
