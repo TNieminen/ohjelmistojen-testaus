@@ -1,30 +1,30 @@
-import isBoolean from '@/divide.js'
+import divide from '@/divide.js'
 
 describe('==== divide ====', () => {
 
   beforeAll(() => {
     // TYPE: SETUP, run global setups at the start if needed
-   })
-   beforeEach(() => {
+  })
+  beforeEach(() => {
     // TYPE: SETUP, run a script before each "it"
-   })
-   afterEach(() => {
+  })
+  afterEach(() => {
     // TYPE: CLEAN UP, run scripts to clean up after each "it"
-   })
+  })
  
-  it('Should return positive integer',() => {
+  xit('Should return positive integer',() => {
     expect(divide(10,2)).toEqual(5)
   })
-  it('Should return negative integer',() => {
+  xit('Should return negative integer',() => {
     expect(divide(10,-2)).toEqual(-5)
   })
-  it('Should return positive decimal',() => {
+  xit('Should return positive decimal',() => {
     expect(divide(6,4)).toEqual(1.5)
   })
-  it('Should returnnegative decimal',() => {
-    expect(divide(6,-4)).toEqual-(1.5)
+  xit('Should return negative decimal',() => {
+    expect(divide(6,-4)).toEqual(1.5)
   })
-  it('Should return error if dividing by 0',() => {
-    expect(divide(10,0)).toThrow("MathError")
+  xit('Should return error if dividing by 0',() => {
+    expect(divide(10,0)).toThrow('MathError')
   })
 })

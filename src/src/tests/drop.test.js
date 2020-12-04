@@ -1,16 +1,16 @@
-import isBoolean from '@/drop.js'
+import drop from '@/drop.js'
 
 describe('==== drop ====', () => {
 
   beforeAll(() => {
     // TYPE: SETUP, run global setups at the start if needed
-   })
-   beforeEach(() => {
+  })
+  beforeEach(() => {
     // TYPE: SETUP, run a script before each "it"
-   })
-   afterEach(() => {
+  })
+  afterEach(() => {
     // TYPE: CLEAN UP, run scripts to clean up after each "it"
-   })
+  })
  
   it('Should return all elements',() => {
     expect(drop([1,2,3,4],0)).toEqual([1,2,3,4])
