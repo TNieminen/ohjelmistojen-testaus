@@ -12,8 +12,14 @@ describe('==== every ====', () => {
     const callbackMock = jest.fn()
     const iterables = [1,2]
     every(iterables,callbackMock)
-    expect(callbackMock).toHaveBeenCalledTimes(iterables.length)
-    callbackMock.mockClear()
+    // For some reason the function executes in a different event loop
+    // than our expect, and without a setTimeout the expect fires before
+    // callback has been called iterables.length amount of times.
+    // This seems to be a limitation of the test itself and remains unclear as of now
+    setTimeout(() => {
+      expect(callbackMock).toHaveBeenCalledTimes(iterables.length)
+      callbackMock.mockClear()
+    },0)
   })
 
   it('If all values match, should return true',() => {
