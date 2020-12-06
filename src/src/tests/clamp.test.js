@@ -1,28 +1,38 @@
-import isBoolean from '@/clamp.js'
+import clamp from '@/clamp.js'
 
 describe('==== clamp ====', () => {
-
-  beforeAll(() => {
-    // TYPE: SETUP, run global setups at the start if needed
-   })
-   beforeEach(() => {
-    // TYPE: SETUP, run a script before each "it"
-   })
-   afterEach(() => {
-    // TYPE: CLEAN UP, run scripts to clean up after each "it"
-   })
   
-  it('Should return -5 with inputs -10, -5, 5',() => {
+  it('Should raise a number lower than the lower limit, to the lower limit',() => {
     expect(clamp(-10, -5, 5)).toEqual(-5)
   })
 
-  it('Should return 5 with inputs 10, -5, 5',() => {
+  xit('Should lower a number higher than the higher limit, to the higher limit',() => {
     expect(clamp(10, -5, 5)).toEqual(5)
   })
 
+  xit('Should keep its own value if already between limits on positive side',() => {
+    expect(clamp(1, -5, 5)).toEqual(1)
+  })
+
+  xit('Should keep its own value if already between limits at zero',() => {
+    expect(clamp(0, -5, 5)).toEqual(0)
+  })
+
+  xit('Should keep its own value if already between limits on the negative side',() => {
+    expect(clamp(-1, -5, 5)).toEqual(-1)
+  })
+
   // neg cases
-  it('Should return 0 with invalid input',() => {
-    expect(clamp("invalid",-5,5)).toEqual(0)
+  it('Should return NaN with undefined inputs',() => {
+    expect(clamp(undefined,undefined,undefined)).toEqual(NaN)
+  })
+
+  xit('Should return NaN with incorrect inputs null, undefined and NaN',() => {
+    expect(clamp(null,undefined,NaN)).toEqual(NaN)
+  })
+
+  it('Should return NaN with incorrect inputs string, object and empty string',() => {
+    expect(clamp('string',{},'')).toEqual(NaN)
   })
 
 })

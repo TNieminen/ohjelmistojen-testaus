@@ -1,28 +1,34 @@
-import isBoolean from '@/filter.js'
+import filter from '@/filter.js'
+
+/**
+ * TODO: In these tests we opted out to not test with different inputs, but rather
+ * see if the promised operation is carried through. This is because if we were
+ * to for instance pass in ({ active }) => active as predicate, we are effectively testing 
+ * the predicate function in addition to the function implementation itself.
+ */
 
 describe('==== filter ====', () => {
-
-  const users = [
-    { 'user': 'name1', 'active': true, 'test': true},
-    { 'user': 'name2', 'active': false, 'test': false},
-    { 'user': 'name3', 'active': true, 'test': false}]
-  beforeAll(() => {
-    // TYPE: SETUP, run global setups at the start if needed
-   })
-   beforeEach(() => {
-    // TYPE: SETUP, run a script before each "it"
-   })
-   afterEach(() => {
-    // TYPE: CLEAN UP, run scripts to clean up after each "it"
-   })
  
-  it('Should return one when test true',() => {
-    expect(filter(users, ({test}) => test)).toEqual(['name1'])
+  it('Should call predicate function for each array element',() => {
+    const callbackMock = jest.fn()
+    const iterables = [1,2]
+    filter(iterables,callbackMock)
+    expect(callbackMock).toHaveBeenCalledTimes(iterables.length)
+    callbackMock.mockClear()
   })
-  it('Should return two names when active true',() => {
-    expect(filter(users, ({active}) => active)).toEqual(['name1'])
+
+  it('If all values match, should return original array',() => {
+    const callbackMock = jest.fn(() => true)
+    const iterables = [1,2]
+    expect(filter(iterables,callbackMock)).toEqual(iterables)
+    callbackMock.mockClear()
   })
-  it('Should return no names when no keys',() => {
-    expect(filter(users, ({invalid}) => invalid)).toEqual([])
+
+  xit('If all values do not match, should return empty array',() => {
+    const callbackMock = jest.fn(() => false)
+    const iterables = [1,2]
+    expect(filter(iterables,callbackMock)).toEqual([])
+    callbackMock.mockClear()
   })
+
 })
