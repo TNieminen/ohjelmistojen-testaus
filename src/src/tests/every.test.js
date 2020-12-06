@@ -1,27 +1,33 @@
 import every from '@/every.js'
 
+/**
+ * TODO: In these tests we opted out to not test with different inputs, but rather
+ * see if the promised operation is carried through. This is because if we were
+ * to for instance pass in Boolean as predicate, we are effectively testing Boolean in 
+ * addition to the function implementation itself.
+ */
 describe('==== every ====', () => {
 
-  beforeAll(() => {
-    // TYPE: SETUP, run global setups at the start if needed
+  it('Should call predicate function for each array element',() => {
+    const callbackMock = jest.fn()
+    const iterables = [1,2]
+    every(iterables,callbackMock)
+    expect(callbackMock).toHaveBeenCalledTimes(iterables.length)
+    callbackMock.mockClear()
   })
-  beforeEach(() => {
-    // TYPE: SETUP, run a script before each "it"
+
+  it('If all values match, should return true',() => {
+    const callbackMock = jest.fn(() => true)
+    const iterables = [1,2]
+    expect(every(iterables,callbackMock)).toEqual(true)
+    callbackMock.mockClear()
   })
-  afterEach(() => {
-    // TYPE: CLEAN UP, run scripts to clean up after each "it"
+
+  it('If all values do not match, should return false',() => {
+    const callbackMock = jest.fn(() => false)
+    const iterables = [1,2]
+    expect(every(iterables,callbackMock)).toEqual(false)
+    callbackMock.mockClear()
   })
- 
-  it('Should return true when same type objects',() => {
-    expect(every(['a','b','c','d'],String)).toEqual(true)
-  })
-  xit('Should return false when not same type objects',() => {
-    expect(every(['a','b',1,2],String)).toEqual(false)
-  })
-  xit('Should return true when all null and objects',() => {
-    expect(every([Object('a'),null],Object)).toEqual(true)
-  })
-  xit('Should return false when null and undefined',() => {
-    expect(every([Object('a'),null,undefined],Object)).toEqual(false)
-  })
+
 })
