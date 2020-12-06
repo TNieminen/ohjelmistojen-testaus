@@ -1,21 +1,11 @@
 import countBy from '@/countBy.js'
 
 describe('==== countBy ====', () => {
-    
-    
+     
   const users = [
     {'user': 'name1', 'val': true},
     {'user': 'name2', 'val': true},
     {'user': 'name3', 'val': false}]
-  beforeAll(() => {
-    // TYPE: SETUP, run global setups at the start if needed
-  })
-  beforeEach(() => {
-    // TYPE: SETUP, run a script before each "it"
-  })
-  afterEach(() => {
-    // TYPE: CLEAN UP, run scripts to clean up after each "it"
-  })
   
   xit('Should return correct amount of values in input',() => {
     let ans = {'true':2,'false':1}
@@ -32,7 +22,7 @@ describe('==== countBy ====', () => {
     expect(countBy({},value => value.val)).toEqual({})
   })
 
-  xit('Should return empty object with invalid function',() => {
+  xit('Should return empty object if no iteratees have a matching value',() => {
     expect(countBy(users,value => value.invalid)).toEqual({})
   })
 })

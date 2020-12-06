@@ -1,16 +1,6 @@
 import chunk from '@/chunk.js'
 
 describe('==== chunk ====', () => {
-
-  beforeAll(() => {
-    // TYPE: SETUP, run global setups at the start if needed
-  })
-  beforeEach(() => {
-    // TYPE: SETUP, run a script before each "it"
-  })
-  afterEach(() => {
-    // TYPE: CLEAN UP, run scripts to clean up after each "it"
-  })
   
   xit('Should return [[1,2],[3,4]] with input [1,2,3,4] and 2',() => {
     expect(chunk([1,2,3,4],2)).toEqual([[1,2],[3,4]] )
@@ -28,8 +18,26 @@ describe('==== chunk ====', () => {
     expect(chunk([1,2,3,4],3)).toEqual([[1,2,3],[4]] )
   })
   // neg cases
-  xit('Should return [] with invalid input 0',() => {
-    expect(chunk([1,2,3,4],3)).toEqual([])
+  it('Should return [] with empty input',() => {
+    expect(chunk()).toEqual([])
+  })
+
+  // TODO: since we are not doing type checking we should throw errors on invalid inputs
+  // or at least document the expected handling
+  xit('Should throw an error if input is an object',() => {
+    expect(() => chunk({})).toThrow()
+  })
+
+  xit('Should throw an error if input is a function',() => {
+    expect(() => chunk(() => console.log(true))).toThrow()
+  })
+
+  xit('Should throw an error if input is an integer',() => {
+    expect(() => chunk(2)).toThrow()
+  })
+
+  xit('Should throw an error if input is a string',() => {
+    expect(() => chunk('')).toThrow()
   })
 
 })
