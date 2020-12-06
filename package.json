@@ -9,7 +9,7 @@
   "scripts": {
     "integration-test": "export NODE_ENV='integration' && jest --config ./jest.config.js",
     "unit-test": "export NODE_ENV='unit' && jest --config ./jest.config.js",
-    "test": "NODE_ENV=test jest --coverage && yarn coverage",
+    "test": "set NODE_ENV=test jest --coverage && yarn coverage",
     "coverage": "coveralls < coverage/lcov.info",
     "lint": "eslint --fix --ext .js ."
   },
