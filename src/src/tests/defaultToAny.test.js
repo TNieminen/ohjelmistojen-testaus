@@ -1,19 +1,25 @@
 import defaultToAny from '@/defaultToAny.js'
 
 describe('==== defaultToAny ====', () => {
-    
-  beforeAll(() => {
-    // TYPE: SETUP, run global setups at the start if needed
-  })
-  beforeEach(() => {
-    // TYPE: SETUP, run a script before each "it"
-  })
-  afterEach(() => {
-    // TYPE: CLEAN UP, run scripts to clean up after each "it"
-  })
-  
+
   it('Should return first value with string input',() => {
     expect(defaultToAny('valid','valid2','default')).toEqual('valid')
+  })
+
+  // neg cases
+  it('Should return default value with null input',() => {
+    expect(defaultToAny(null,'default')).toEqual('default')
+  })
+
+  it('Should return default value with undefined input',() => {
+    expect(defaultToAny(undefined,'default')).toEqual('default')
+  })
+
+  // TODO: it seems we are comparing against null, NaN will not pass this test
+  // because it is a special case in comparisons
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN
+  xit('Should return default value with NaN input',() => {
+    expect(defaultToAny(NaN,'default')).toEqual('default')
   })
 
   it('Should return first value with number input',() => {
@@ -21,12 +27,19 @@ describe('==== defaultToAny ====', () => {
   })
 
   // neg cases
-  it('Should return first default value with falsey input',() => {
+  it('Should return first default value with falsy input',() => {
     expect(defaultToAny(null,'default','default2')).toEqual('default')
   })
 
-  it('Should return second default value with falsey inputs',() => {
+  it('Should return second default value with falsy inputs',() => {
     expect(defaultToAny(null,undefined,'default2')).toEqual('default2')
+  })
+
+  // TODO: it seems we are comparing against null, NaN will not pass this test
+  // because it is a special case in comparisons
+  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN
+  xit('Should return third default value with falsy inputs',() => {
+    expect(defaultToAny(null,undefined,NaN,'default2')).toEqual('default2')
   })
 
 })
