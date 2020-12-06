@@ -28,14 +28,13 @@ describe('==== at ====', () => {
   })
 
   // TODO: No input validation which can lead to unintended results, currently returns an empty array
-  xit('Should return throw if input object is not a valid object',() => {
+  xit('Should throw if input object is not a valid object',() => {
     expect(() => at(undefined, [])).toThrow()
   })
 
   // TODO: No input validation which can lead to unintended results, currently returns an empty array
-  xit('Should return throw if input array is not a valid array',() => {
+  xit('Should throw if input array is not a valid array',() => {
     expect(() => at({}, undefined)).toThrow()
-  })
-  
+  })  
 
 })
