@@ -21,7 +21,7 @@ describe('==== isLength ====', () => {
     expect(isLength(Number.MAX_VALUE)).toEqual(false)
   })
   it('Should return false if input is non string',() => {
-    expect(isLength("3")).toEqual(false)
+    expect(isLength('3')).toEqual(false)
   })
   it('Should return false if input is negative number',() => {
     expect(isLength(-1)).toEqual(false)
