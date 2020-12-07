@@ -2,35 +2,74 @@ import toInteger from '@/toInteger.js'
 
 describe('==== toInteger ====', () => {
 
-  it('Should provide correct value when casting integer',() => {
-    expect(toInteger(1)).toEqual(1)
+  describe('=== general cases ===',() => {
+    
+    it('Should provide correct value when casting integer',() => {
+      expect(toInteger(1)).toEqual(1)
+    })
+  
+    it('Should provide correct value when casting floating point number',() => {
+      expect(toInteger(1.1)).toEqual(1)
+    })
+  
+    it('Should provide correct value casting Number.MIN_VALUE',() => {
+      expect(toInteger(Number.MIN_VALUE)).toEqual(0)
+    })
+  
+    it('Should provide correct value with string containing number',() => {
+      expect(toInteger('2')).toEqual(2)
+    })
+  
+    it('Should provide correct value with string containing number',() => {
+      expect(toInteger('2.2')).toEqual(2)
+    })
+
+    it('Should provide correct value with Infinity',() => {
+      expect(toInteger(Infinity)).toEqual(1.7976931348623157e+308)
+    })
+  
+    it('Should provide correct value with -Infinity',() => {
+      expect(toInteger(-Infinity)).toEqual(-1.7976931348623157e+308)
+    })
+
   })
 
-  it('Should provide correct value when casting number',() => {
-    expect(toInteger(1.1)).toEqual(1.1)
-  })
+  describe('=== invalid input ===', () => {
+    
+    // TODO: Since this not otherwise documented, we'd expect a non castable to return NaN
+    xit('Should provide NaN with string containing non number',() => {
+      expect(Number.isNaN(toInteger('k'))).toEqual(true)
+    })
 
-  it('Should provide correct value casting Number.MIN_VALUE',() => {
-    expect(toInteger(Number.MIN_VALUE)).toEqual(0)
-  })
+    // TODO: Since this not otherwise documented, we'd expect a non castable to return NaN
+    xit('Should provide NaN with an empty string',() => {
+      expect(Number.isNaN(toInteger(''))).toEqual(true)
+    })
 
-  it('Should provide correct value with string containing number',() => {
-    expect(toInteger('2')).toEqual(2)
-  })
+    // TODO: Since this not otherwise documented, we'd expect a non castable to return NaN
+    xit('Should provide NaN with undefined',() => {
+      expect(Number.isNaN(toInteger(undefined))).toEqual(true)
+    })
 
-  it('Should provide correct value with string containing number',() => {
-    expect(toInteger('2.2')).toEqual(2)
-  })
+    // TODO: Since this not otherwise documented, we'd expect a non castable to return NaN
+    xit('Should provide NaN with null',() => {
+      expect(Number.isNaN(toInteger(null))).toEqual(true)
+    })
 
-  it('Should provide 0 with string containing non number',() => {
-    expect(toInteger('k')).toEqual(0)
-  })
+    // TODO: Since this not otherwise documented, we'd expect a non castable to return NaN
+    xit('Should provide NaN with object',() => {
+      expect(Number.isNaN(toInteger({}))).toEqual(true)
+    })
 
-  it('Should provide correct value with Infinity',() => {
-    expect(toInteger(Infinity)).toEqual(1.7976931348623157e+308)
-  })
+    // TODO: Since this not otherwise documented, we'd expect a non castable to return NaN
+    xit('Should provide NaN with NaN',() => {
+      expect(Number.isNaN(toInteger(NaN))).toEqual(true)
+    })
 
-  it('Should provide correct value with -Infinity',() => {
-    expect(toInteger(-Infinity)).toEqual(-1.7976931348623157e+308)
+    // TODO: Since this not otherwise documented, we'd expect a non castable to return NaN
+    xit('Should provide NaN with function',() => {
+      expect(Number.isNaN(toInteger(() => {}))).toEqual(true)
+    })
+
   })
 })
