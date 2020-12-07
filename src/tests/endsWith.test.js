@@ -23,15 +23,15 @@ describe('==== endsWith ====', () => {
     expect(() => endsWith(undefined,'4')).toThrow()
   })
   // Related issue https://github.com/TNieminen/ohjelmistojen-testaus/issues/23
-  xit('Should throw error with NaN input',() => {
+  it('Should throw error with NaN input',() => {
     expect(() => endsWith(NaN,'4')).toThrow()
   })
   // Related issue https://github.com/TNieminen/ohjelmistojen-testaus/issues/23
-  xit('Should throw error with object input',() => {
+  it('Should throw error with object input',() => {
     expect(() => endsWith({},'4')).toThrow()
   })
   // Related issue https://github.com/TNieminen/ohjelmistojen-testaus/issues/23
-  xit('Should throw error with function input',() => {
+  it('Should throw error with function input',() => {
     const testFunc = () => {}
     expect(() => endsWith(testFunc,'4')).toThrow()
   })

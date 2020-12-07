@@ -3,12 +3,12 @@ import toString from '@/toString.js'
 describe('==== toString ====', () => {
 
   // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/34
-  xit('Should provide correct value when casting null',() => {
+  it('Should provide correct value when casting null',() => {
     expect(toString(null)).toEqual('')
   })
 
   // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/35
-  xit('Should provide correct value when casting null',() => {
+  it('Should provide correct value when casting null',() => {
     expect(toString(undefined)).toEqual('')
   })
 

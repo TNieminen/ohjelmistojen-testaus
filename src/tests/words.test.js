@@ -49,28 +49,28 @@ describe('==== word ====', () => {
   describe('=== second argument invalid ===', () => {
 
     // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/36
-    xit('Should throw if input is undefined',() => {
+    it('Should throw if input is undefined',() => {
       expect(() => words('undefined',undefined)).toThrow()
     })
 
     // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/36
-    xit('Should not match string containing undefined if input is undefined',() => {
+    it('Should not match string containing undefined if input is undefined',() => {
       expect(words('undefined',undefined)).not.toEqual(['undefined'])
     })
   
     // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/36
-    xit('Should throw if input is null',() => {
+    it('Should throw if input is null',() => {
       expect(() => words(' ',null)).toThrow()
     })
   
     // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/36
-    xit('Should throw if input is NaN',() => {
+    it('Should throw if input is NaN',() => {
       console.log(words(' ',NaN))
       expect(() => words(' ',NaN)).toThrow()
     })
   
     // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/36
-    xit('Should throw if input is object',() => {
+    it('Should throw if input is object',() => {
       expect(() => words(' ',{})).toThrow()
     })
     

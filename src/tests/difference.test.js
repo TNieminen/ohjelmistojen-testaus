@@ -67,7 +67,7 @@ describe('==== difference ====', () => {
   })
 
   // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/20
-  xit('Should handle -0 inclusion',() => {
+  it('Should handle -0 inclusion',() => {
     expect(difference([1,-0],[3,4])).toEqual([1,-0])
   })
 

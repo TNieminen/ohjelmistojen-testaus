@@ -65,7 +65,7 @@ describe('==== ceil ====', () => {
     // TODO: there is no documentation around how invalid values are handled
     // nor is there inbuilt validation. Expect to return NaN.
     // Related issue https://github.com/TNieminen/ohjelmistojen-testaus/issues/11
-    xit('Should return NaN if input is null', () => {
+    it('Should return NaN if input is null', () => {
       expect(ceil(null)).toEqual(NaN)
     })
 
@@ -76,7 +76,7 @@ describe('==== ceil ====', () => {
     // TODO: there is no documentation around how invalid values are handled
     // nor is there inbuilt validation. Expect to return NaN.
     // Related issue https://github.com/TNieminen/ohjelmistojen-testaus/issues/11
-    xit('Should return NaN if input is an empty string', () => {
+    it('Should return NaN if input is an empty string', () => {
       expect(ceil('')).toEqual(NaN)
     })
 

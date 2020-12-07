@@ -16,7 +16,7 @@ describe('==== defaultToAny ====', () => {
   })
 
   // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/19
-  xit('Should return default value with NaN input',() => {
+  it('Should return default value with NaN input',() => {
     expect(defaultToAny(NaN,'default')).toEqual('default')
   })
 
@@ -34,7 +34,7 @@ describe('==== defaultToAny ====', () => {
   })
 
   // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/19
-  xit('Should return third default value with falsy inputs',() => {
+  it('Should return third default value with falsy inputs',() => {
     expect(defaultToAny(null,undefined,NaN,'default2')).toEqual('default2')
   })
 

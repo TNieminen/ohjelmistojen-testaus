@@ -25,7 +25,7 @@ describe('==== filter ====', () => {
   })
 
   // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/26
-  xit('If all values do not match, should return empty array',() => {
+  it('If all values do not match, should return empty array',() => {
     const callbackMock = jest.fn(() => false)
     const iterables = [1,2]
     expect(filter(iterables,callbackMock)).toEqual([])

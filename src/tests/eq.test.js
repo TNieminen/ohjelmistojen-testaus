@@ -103,7 +103,7 @@ const testCases = [
 
 function matchArrDouble(arr) {
   // TODO: These are failing cases which should be fixed, not filtered out to pass tests
-  // since each. does not allow xit
+  // since each. does not allow it
   const pairsToFilter = [
     [0,''], // Related issue https://github.com/TNieminen/ohjelmistojen-testaus/issues/24
     ['',0], // same issue as above

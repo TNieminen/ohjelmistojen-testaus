@@ -33,7 +33,7 @@ describe('==== toNumber ====', () => {
     })
 
     // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/32
-    xit('Should provide NaN with an empty string',() => {
+    it('Should provide NaN with an empty string',() => {
       expect(Number.isNaN(toNumber(''))).toEqual(true)
     })
 
@@ -42,7 +42,7 @@ describe('==== toNumber ====', () => {
     })
 
     // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/33
-    xit('Should provide NaN with null',() => {
+    it('Should provide NaN with null',() => {
       expect(Number.isNaN(toNumber(null))).toEqual(true)
     })
 

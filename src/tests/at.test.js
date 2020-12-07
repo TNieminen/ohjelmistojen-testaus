@@ -29,13 +29,13 @@ describe('==== at ====', () => {
 
   // TODO: No input validation which can lead to unintended results, currently returns an empty array
   // Related issue https://github.com/TNieminen/ohjelmistojen-testaus/issues/8
-  xit('Should throw if input object is not a valid object',() => {
+  it('Should throw if input object is not a valid object',() => {
     expect(() => at(undefined, [])).toThrow()
   })
 
   // TODO: No input validation which can lead to unintended results, currently returns an empty array
   // Related issue https://github.com/TNieminen/ohjelmistojen-testaus/issues/8
-  xit('Should throw if input array is not a valid array',() => {
+  it('Should throw if input array is not a valid array',() => {
     expect(() => at({}, undefined)).toThrow()
   })  
 

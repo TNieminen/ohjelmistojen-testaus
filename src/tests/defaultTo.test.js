@@ -20,7 +20,7 @@ describe('==== defaultTo ====', () => {
   })
 
   // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/18
-  xit('Should return default value with NaN input',() => {
+  it('Should return default value with NaN input',() => {
     expect(defaultTo(NaN,'default')).toEqual('default')
   })
 

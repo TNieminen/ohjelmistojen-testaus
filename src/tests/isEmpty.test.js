@@ -12,7 +12,7 @@ import isEmpty from '@/isEmpty.js'
 describe('==== isEmpty ====', () => {
   
   // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/27
-  xit('Should return false if input is undefined',() => {
+  it('Should return false if input is undefined',() => {
     expect(isEmpty(undefined)).toEqual(false)
   })
   // TODO: Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/28 
@@ -20,7 +20,7 @@ describe('==== isEmpty ====', () => {
     expect(isEmpty(null)).toEqual(true)
   })
   // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/29
-  xit('Should return false if input is NaN',() => {
+  it('Should return false if input is NaN',() => {
     expect(isEmpty(NaN)).toEqual(false)
   })
   it('Should return true if input is an empty string',() => {
@@ -42,7 +42,7 @@ describe('==== isEmpty ====', () => {
     expect(isEmpty({1:''})).toEqual(false)
   })
   // TODO: https://github.com/TNieminen/ohjelmistojen-testaus/issues/29
-  xit('Should return false if input is 1',() => {
+  it('Should return false if input is 1',() => {
     expect(isEmpty(1)).toEqual(false)
   })
   // In javascript functions are also objects and an empty function had no string properties matching the description

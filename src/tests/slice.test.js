@@ -40,17 +40,17 @@ describe('==== slice ====', () => {
     describe('== first parameter ==', () => {
       
       // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/30
-      xit('Should throw an exception if first parameter is an object',() => {
+      it('Should throw an exception if first parameter is an object',() => {
         expect(() => slice({}, 0,3)).toThrow()
       })
 
       // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/30
-      xit('Should throw an exception if first parameter is a function.',() => {
+      it('Should throw an exception if first parameter is a function.',() => {
         expect(() => slice(() => {}, 0,3)).toThrow()
       })
   
       // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/30
-      xit('Should throw an exception if first parameter is NaN.',() => {
+      it('Should throw an exception if first parameter is NaN.',() => {
         expect(() => slice(NaN,0,3)).toThrow()
       })
     
@@ -59,17 +59,17 @@ describe('==== slice ====', () => {
     describe('== second parameter ==', () => {
       
       // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/30
-      xit('Should throw an exception if second parameter is an object',() => {
+      it('Should throw an exception if second parameter is an object',() => {
         expect(() => slice([1,2,3,4], {},3)).toThrow()
       })
 
       // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/30
-      xit('Should throw an exception if second parameter is a function.',() => {
+      it('Should throw an exception if second parameter is a function.',() => {
         expect(() => slice([1,2,3,4], () => {},3)).toThrow()
       })
   
       // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/30
-      xit('Should throw an exception if second parameter is NaN.',() => {
+      it('Should throw an exception if second parameter is NaN.',() => {
         expect(() => slice([1,2,3,4], NaN,3)).toThrow()
       })
 
@@ -78,17 +78,17 @@ describe('==== slice ====', () => {
     describe('== third parameter ==', () => {
       
       // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/30
-      xit('Should throw an exception if third parameter is an object',() => {
+      it('Should throw an exception if third parameter is an object',() => {
         expect(() => slice([1,2,3,4], 0,{})).toThrow()
       })
 
       // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/30
-      xit('Should throw an exception if third parameter is a function.',() => {
+      it('Should throw an exception if third parameter is a function.',() => {
         expect(() => slice([1,2,3,4], 0, () => {})).toThrow()
       })
   
       // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/30
-      xit('Should throw an exception if third parameter is NaN.',() => {
+      it('Should throw an exception if third parameter is NaN.',() => {
         expect(() => slice([1,2,3,4], 0, NaN)).toThrow()
       })
 
