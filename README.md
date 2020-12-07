@@ -58,3 +58,10 @@ You can try running this by doing:
 
 https://github.com/nickmerwin/node-coveralls
 https://github.com/Ethan-Arrowood/harperdb-connect/blob/master/.travis.yml
+
+## Notes
+
+Since the library references [`SameValueZero`](http://ecma-international.org/ecma-262/7.0/#sec-samevaluezero)
+at Ecmascript 2016 this is the support level of this library e.g. ES7
+
+Node support table https://node.green/

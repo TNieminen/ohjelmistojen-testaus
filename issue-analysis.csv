@@ -1,0 +1,31 @@
+at.js doesn't have input validation,8,2,1,2,0
+ceil.js incorrect documentation,10,5,1,5,0
+ceil.js missing input validation,11,2,2,4,0
+chunk.js not validating input,13,2,2,4,0
+clamp.js returning 0 instead on NaN,15,1,2,2,0
+defaultTo.js is not handling NaN input ,18,1,1,1,0
+defaultToAny not handling NaN input,19,1,1,1,0
+difference.js not handling -0 inclusion to arrays ,20,1,1,1,0
+divide.test.js not handling edge cases,22,2,2,4,0
+endsWith.js doesn't have consistent handling for invalid inputs,23,2,2,4,0
+isEmpty.js doesn't handle primitive undefined correctly,27,2,2,4,0
+isEmpty doesn't handle primitive null correctly,28,2,2,4,0
+isEmpty doesn't handle NaN or Number correctly,29,2,2,4,0
+toInteger.js should return NaN for invalid inputs,31,2,2,4,0
+toNumber.js returns 0 instead of NaN for empty strings,32,2,2,4,0
+toNumber.js doesn't returns 0 instead of NaN for null,33,2,2,4,0
+toString.js returns 'null' instead of '' when input is null,34,2,2,4,0
+toString.js returns 'undefined' instead of '' when input is undefined,35,2,2,4,0
+words.js inconsistent handling for invalid regex patterns,36,2,2,4,0
+add.js Should handle invalid inputs,7,3,2,6,1
+cameCase.js adds an extra space in front of the returned string ,9,5,2,10,1
+eq.js equals empty string to 0,24,2,3,6,1
+eq.js equals null to undefined,25,2,3,6,1
+filter.js returns a nested array rather than an array with empty output,26,3,3,9,1
+slice.js doesn't handle or properly document incorrect inputs ,30,3,2,6,1
+chunk.js not chunking arrays as expected,12,5,3,15,2
+clamp.js always returning the lower limit,14,5,3,15,2
+compact.js returns only first item after filtering for falsy values,16,5,3,15,2
+countBy.js not counting members correctly.,17,5,3,15,2
+divide.js not producing basic division operations,21,5,3,15,2
+,Issue #,Frequency,How Serious,Score,Issue Level

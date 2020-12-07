@@ -30,10 +30,9 @@ module.exports = {
   // you might need to run separate setup scripts for the env to work
   // you might for instance want to mock fetch globally with document.fech = require('jest-fetch-mock')
   // setupFiles: ['./jest.setup.js', 'jest-canvas-mock', 'jest-useragent-mock', 'window-resizeto/polyfill'],
-  
+
   // what files to match for tests
-  testMatch: ['<rootDir>/(**/**/**.(test).(js|jsx|ts|tsx))', '(**/**/**.(test).(js|jsx|ts|tsx))'],
-  
+  testMatch: ['<rootDir>/(**/**/**.(test).(js|jsx|ts|tsx))', '(**/**/**.(test).(js|jsx|ts|tsx))']
   // By default node_modules are not transpiled by jest
   // You can add things to the regexp pattern to ignore
   // Or you can add items after the ?! to force transpilation. Sometimes some modules
