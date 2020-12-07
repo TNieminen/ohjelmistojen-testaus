@@ -17,6 +17,9 @@ describe('==== isBuffer ====', () => {
   it('Should return false if input is a string',() => {
     expect(isDate('Mon April 23 2012')).toEqual(false)
   })
+  it('Should return false if input is a ISO datestring',() => {
+    expect(isDate('2020-12-07T02:34:11.707Z')).toEqual(false)
+  })
   it('Should return false if input is 0',() => {
     expect(isDate(0)).toEqual(false)
   })
