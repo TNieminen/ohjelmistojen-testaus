@@ -36,37 +36,37 @@ describe('==== toInteger ====', () => {
 
   describe('=== invalid input ===', () => {
     
-    // TODO: Since this not otherwise documented, we'd expect a non castable to return NaN
+    // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/31
     xit('Should provide NaN with string containing non number',() => {
       expect(Number.isNaN(toInteger('k'))).toEqual(true)
     })
 
-    // TODO: Since this not otherwise documented, we'd expect a non castable to return NaN
+    // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/31
     xit('Should provide NaN with an empty string',() => {
       expect(Number.isNaN(toInteger(''))).toEqual(true)
     })
 
-    // TODO: Since this not otherwise documented, we'd expect a non castable to return NaN
+    // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/31
     xit('Should provide NaN with undefined',() => {
       expect(Number.isNaN(toInteger(undefined))).toEqual(true)
     })
 
-    // TODO: Since this not otherwise documented, we'd expect a non castable to return NaN
+    // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/31
     xit('Should provide NaN with null',() => {
       expect(Number.isNaN(toInteger(null))).toEqual(true)
     })
 
-    // TODO: Since this not otherwise documented, we'd expect a non castable to return NaN
+    // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/31
     xit('Should provide NaN with object',() => {
       expect(Number.isNaN(toInteger({}))).toEqual(true)
     })
 
-    // TODO: Since this not otherwise documented, we'd expect a non castable to return NaN
+    // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/31
     xit('Should provide NaN with NaN',() => {
       expect(Number.isNaN(toInteger(NaN))).toEqual(true)
     })
 
-    // TODO: Since this not otherwise documented, we'd expect a non castable to return NaN
+    // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/31
     xit('Should provide NaN with function',() => {
       expect(Number.isNaN(toInteger(() => {}))).toEqual(true)
     })

@@ -45,29 +45,31 @@ describe('==== word ====', () => {
     })
 
   })
-
-  /**
-   * TODO: After testing with different inputs to regex matching, we conclude
-   * it would be best to have a verification step for proper regex pattern and otherwise throw an error.
-   * This is because regex casts values such and null to regex /null/ but the internal handling
-   * for value undefined is different which leads to inconsistent results. For this reason we think
-   * it best the function would do validation and throw expectios when necessary
-   */
+  
   describe('=== second argument invalid ===', () => {
 
-    
+    // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/36
     xit('Should throw if input is undefined',() => {
-      expect(() => words(' ',undefined)).toThrow()
+      expect(() => words('undefined',undefined)).toThrow()
+    })
+
+    // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/36
+    xit('Should not match string containing undefined if input is undefined',() => {
+      expect(words('undefined',undefined)).not.toEqual(['undefined'])
     })
   
+    // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/36
     xit('Should throw if input is null',() => {
       expect(() => words(' ',null)).toThrow()
     })
   
+    // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/36
     xit('Should throw if input is NaN',() => {
+      console.log(words(' ',NaN))
       expect(() => words(' ',NaN)).toThrow()
     })
   
+    // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/36
     xit('Should throw if input is object',() => {
       expect(() => words(' ',{})).toThrow()
     })

@@ -18,10 +18,6 @@ describe('==== drop ====', () => {
     expect(drop([0,0])).toEqual([0])
   })
 
-  /**
-   * TODO: The function does not specify handling for special inputs.
-   * These tests should be either fixed or the documentation updated
-   */
   it('Should handle objects',() => {
     expect(drop([{},{}])).toEqual([{}])
   })

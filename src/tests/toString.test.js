@@ -2,12 +2,12 @@ import toString from '@/toString.js'
 
 describe('==== toString ====', () => {
 
-  // TODO: per documentation should return an empty string, now returns 'null'
+  // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/34
   xit('Should provide correct value when casting null',() => {
     expect(toString(null)).toEqual('')
   })
 
-  // TODO: per documentation should return empty string, now returns 'undefined'
+  // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/35
   xit('Should provide correct value when casting null',() => {
     expect(toString(undefined)).toEqual('')
   })
@@ -15,7 +15,6 @@ describe('==== toString ====', () => {
   it('Should provide correct value when casting NaN',() => {
     expect(toString(NaN)).toEqual('NaN')
   })
-
 
   it('Should provide correct value when casting number',() => {
     expect(toString(1.1)).toEqual('1.1')

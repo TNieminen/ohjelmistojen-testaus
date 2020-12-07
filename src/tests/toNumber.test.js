@@ -28,37 +28,32 @@ describe('==== toNumber ====', () => {
   
   describe('=== invalid input ===', () => {
     
-    // TODO: Since this not otherwise documented, we'd expect a non castable to return NaN
     it('Should provide NaN with string containing non number',() => {
       expect(Number.isNaN(toNumber('k'))).toEqual(true)
     })
 
-    // TODO: Since this not otherwise documented, we'd expect a non castable to return NaN
+    // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/32
     xit('Should provide NaN with an empty string',() => {
       expect(Number.isNaN(toNumber(''))).toEqual(true)
     })
 
-    // TODO: Since this not otherwise documented, we'd expect a non castable to return NaN
     it('Should provide NaN with undefined',() => {
       expect(Number.isNaN(toNumber(undefined))).toEqual(true)
     })
 
-    // TODO: Since this not otherwise documented, we'd expect a non castable to return NaN
+    // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/33
     xit('Should provide NaN with null',() => {
       expect(Number.isNaN(toNumber(null))).toEqual(true)
     })
 
-    // TODO: Since this not otherwise documented, we'd expect a non castable to return NaN
     it('Should provide NaN with object',() => {
       expect(Number.isNaN(toNumber({}))).toEqual(true)
     })
 
-    // TODO: Since this not otherwise documented, we'd expect a non castable to return NaN
     it('Should provide NaN with NaN',() => {
       expect(Number.isNaN(toNumber(NaN))).toEqual(true)
     })
 
-    // TODO: Since this not otherwise documented, we'd expect a non castable to return NaN
     it('Should provide NaN with function',() => {
       expect(Number.isNaN(toNumber(() => {}))).toEqual(true)
     })
