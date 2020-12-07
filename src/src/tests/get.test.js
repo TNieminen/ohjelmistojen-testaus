@@ -60,16 +60,12 @@ describe('==== get ====', () => {
       expect(get(obj, ['b'])).toEqual(undefined)
     })
   
-    // TODO: No input validation which can lead to unintended results, currently returns undefined
-    // this should be fixed or documented as expected behaviour
-    xit('Should throw if input object is not a valid object',() => {
-      expect(() => get(undefined, ['a'])).toThrow()
+    it('Should throw if input object is not a valid object',() => {
+      expect(get(undefined, ['a'])).toEqual(undefined)
     })
   
-    // TODO: No input validation which can lead to unintended results, currently returns undefined
-    // this should be fixed or documented as expected behaviour
-    xit('Should throw if input array is not a valid array',() => {
-      expect(() => get({}, undefined)).toThrow()
+    it('Should throw if input array is not a valid array',() => {
+      expect(get({}, undefined)).toEqual(undefined)
     })  
   })
 
@@ -131,16 +127,12 @@ describe('==== get ====', () => {
       expect(get(obj, 'b')).toEqual(undefined)
     })
   
-    // TODO: No input validation which can lead to unintended results, currently returns undefined
-    // this should be fixed or documented as expected behaviour
-    xit('Should throw if input object is not a valid object',() => {
-      expect(() => get(undefined, 'a')).toThrow()
+    it('Should throw if input object is not a valid object',() => {
+      expect(get(undefined, 'a')).toEqual(undefined)
     })
   
-    // TODO: No input validation which can lead to unintended results, currently returns undefined
-    // this should be fixed or documented as expected behaviour
-    xit('Should throw if input array is not a valid array',() => {
-      expect(() => get({}, undefined)).toThrow()
+    it('Should throw if input array is not a valid array',() => {
+      expect(get({}, undefined)).toEqual(undefined)
     })  
   })
 
