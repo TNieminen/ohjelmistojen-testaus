@@ -19,11 +19,20 @@ describe('==== add ====', () => {
   })
   // TODO: The function lack input validation and will return unintended results.
   // Since the library is not typed inputs should be validated
+  // Related issue https://github.com/TNieminen/ohjelmistojen-testaus/issues/7
   xit('Should throw an error if inputs are invalid and valid',() => {
     expect(() => add('invalid',6)).toThrow()
   })
+
   // TODO: The function lack input validation and will return unintended results.
   // Since the library is not typed inputs should be validated
+  // Related issue https://github.com/TNieminen/ohjelmistojen-testaus/issues/7
+  xit('Should throw an error if inputs are valid and invalid',() => {
+    expect(() => add(6,'invalid')).toThrow()
+  })
+  // TODO: The function lack input validation and will return unintended results.
+  // Since the library is not typed inputs should be validated
+  // Related issue https://github.com/TNieminen/ohjelmistojen-testaus/issues/7
   xit('Should throw an error if inputs are not valid numbers',() => {
     expect(() => add('invalid','invalid')).toThrow()
   })

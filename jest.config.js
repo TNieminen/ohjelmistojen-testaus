@@ -32,7 +32,8 @@ module.exports = {
   // setupFiles: ['./jest.setup.js', 'jest-canvas-mock', 'jest-useragent-mock', 'window-resizeto/polyfill'],
 
   // what files to match for tests
-  testMatch: ['<rootDir>/(**/**/**.(test).(js|jsx|ts|tsx))', '(**/**/**.(test).(js|jsx|ts|tsx))'],
+  // testMatch: ['<rootDir>/(**/**/**.(test).(js|jsx|ts|tsx))', '(**/**/**.(test).(js|jsx|ts|tsx))'],
+  testMatch:['<rootDir>/src/src/tests/drop.test.js']
   // By default node_modules are not transpiled by jest
   // You can add things to the regexp pattern to ignore
   // Or you can add items after the ?! to force transpilation. Sometimes some modules

@@ -37,21 +37,21 @@ describe('==== drop ====', () => {
   it('Should handle empty string',() => {
     expect(drop(['',''])).toEqual([''])
   })
-  xit('Should handle strings',() => {
-    expect(drop(['test1','test2'])).toEqual(['test1'])
+  it('Should handle strings',() => {
+    expect(drop(['test1','test2'])).toEqual(['test2'])
   })
-  xit('Should handle function reference',() => {
+  it('Should handle function reference',() => {
     const func1 = () => {}
     const func2 = () => {}
-    expect(drop([func1,func2])).toEqual([func1])
+    expect(drop([func1,func2])).toEqual([func2])
   })
-  xit('Should handle negative values in default operation',() => {
-    expect(drop([-1,-2])).toEqual([-1])
+  it('Should handle negative values in default operation',() => {
+    expect(drop([-1,-2])).toEqual([-2])
   })
-  xit('Should handle negative values two dropped',() => {
-    expect(drop([-1,-2,-3])).toEqual([-1])
+  it('Should handle negative values two dropped',() => {
+    expect(drop([-1,-2,-3],2)).toEqual([-3])
   })
-  xit('Should handle negative values with none dropped',() => {
+  it('Should handle negative values with none dropped',() => {
     expect(drop([-1,-2],0)).toEqual([-1,-2])
   })
 })

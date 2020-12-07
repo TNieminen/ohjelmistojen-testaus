@@ -66,7 +66,7 @@ describe('==== difference ====', () => {
     expect(difference([1,0],[-0])).toEqual([1])
   })
 
-  // -0 should be kept in the array even if it is equal to 0
+  // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/20
   xit('Should handle -0 inclusion',() => {
     expect(difference([1,-0],[3,4])).toEqual([1,-0])
   })

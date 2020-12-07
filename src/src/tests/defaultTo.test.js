@@ -19,9 +19,7 @@ describe('==== defaultTo ====', () => {
     expect(defaultTo(undefined,'default')).toEqual('default')
   })
 
-  // TODO: it seems we are comparing against null, NaN will not pass this test
-  // because it is a special case in comparisons
-  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN
+  // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/18
   xit('Should return default value with NaN input',() => {
     expect(defaultTo(NaN,'default')).toEqual('default')
   })

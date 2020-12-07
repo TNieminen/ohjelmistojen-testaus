@@ -1,22 +1,11 @@
 import ceil from '@/ceil.js'
 
-// TODO: Method documentation is incorrect, namely:
-// "(Round up: the smallest integer greater than or equal to a given number.)"
-// when a floating point input ceil(6.004, 2) returns a float 6.01 not a integer
-// should be fixed to 
-// "Round up: the smallest number, float or integer given precision, greater or equal to given number"
+/**
+ * 
+ * TODO: Method documentation is unclear and gives a picture that only integers are returned.
+ * Related issue https://github.com/TNieminen/ohjelmistojen-testaus/issues/10
+ */
 
-// * ceil(4.006)
-//  * // => 5
-//  *
-//  * ceil(6.004, 2)
-//  * // => 6.01
-//  *
-//  * ceil(6040, -2)
-//  * // => 6100
-//  */
-
-//  TODO:GET BACK TO THIS LATER
 describe('==== ceil ====', () => {
 
   describe('=== precision -1 ===',() => {
@@ -69,44 +58,36 @@ describe('==== ceil ====', () => {
       expect(ceil(5E10,-11)).toEqual(10E10)
     })
 
-    // TODO: there is no documentation around how invalid values are handled
-    // nor is there inbuilt validation. Expect to return NaN.
     it('Should return NaN if input is undefined', () => {
       expect(ceil(undefined)).toEqual(NaN)
     })
 
     // TODO: there is no documentation around how invalid values are handled
     // nor is there inbuilt validation. Expect to return NaN.
+    // Related issue https://github.com/TNieminen/ohjelmistojen-testaus/issues/11
     xit('Should return NaN if input is null', () => {
       expect(ceil(null)).toEqual(NaN)
     })
 
-    // TODO: there is no documentation around how invalid values are handled
-    // nor is there inbuilt validation. Expect to return NaN.
     it('Should return NaN if input is NaN', () => {
       expect(ceil(NaN)).toEqual(NaN)
     })
 
     // TODO: there is no documentation around how invalid values are handled
     // nor is there inbuilt validation. Expect to return NaN.
+    // Related issue https://github.com/TNieminen/ohjelmistojen-testaus/issues/11
     xit('Should return NaN if input is an empty string', () => {
       expect(ceil('')).toEqual(NaN)
     })
 
-    // TODO: there is no documentation around how invalid values are handled
-    // nor is there inbuilt validation. Expect to return NaN.
     it('Should return NaN if input is a string', () => {
       expect(ceil('test')).toEqual(NaN)
     })
 
-    // TODO: there is no documentation around how invalid values are handled
-    // nor is there inbuilt validation. Expect to return NaN.
     it('Should return NaN if input is an object', () => {
       expect(ceil({})).toEqual(NaN)
     })
 
-    // TODO: there is no documentation around how invalid values are handled
-    // nor is there inbuilt validation. Expect to return NaN.
     it('Should return NaN if input is a function', () => {
       expect(ceil(() => {})).toEqual(NaN)
     })

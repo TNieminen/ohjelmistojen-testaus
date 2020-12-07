@@ -15,9 +15,7 @@ describe('==== defaultToAny ====', () => {
     expect(defaultToAny(undefined,'default')).toEqual('default')
   })
 
-  // TODO: it seems we are comparing against null, NaN will not pass this test
-  // because it is a special case in comparisons
-  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN
+  // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/19
   xit('Should return default value with NaN input',() => {
     expect(defaultToAny(NaN,'default')).toEqual('default')
   })
@@ -35,9 +33,7 @@ describe('==== defaultToAny ====', () => {
     expect(defaultToAny(null,undefined,'default2')).toEqual('default2')
   })
 
-  // TODO: it seems we are comparing against null, NaN will not pass this test
-  // because it is a special case in comparisons
-  // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NaN
+  // Related issue: https://github.com/TNieminen/ohjelmistojen-testaus/issues/19
   xit('Should return third default value with falsy inputs',() => {
     expect(defaultToAny(null,undefined,NaN,'default2')).toEqual('default2')
   })
